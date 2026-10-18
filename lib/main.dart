@@ -184,7 +184,7 @@ class ResearchTab extends StatelessWidget {
         const Text('Design choices', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
         const SizedBox(height: 8),
         bullet('Tap, do not type: tasks are chips and checkboxes. The only required text is the project name.'),
-        bullet('Four steps, one question per screen, a progress bar. Photos and confirmation can be skipped and added later.'),
+        bullet('Two steps: add photos or video first (can be skipped), then one review screen. Confirmation by another person is optional and can be added later.'),
         bullet('Nothing is forced public. Each job has a visible/hidden switch.'),
         const SizedBox(height: 8),
         const Text('Not validated yet', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700)),
