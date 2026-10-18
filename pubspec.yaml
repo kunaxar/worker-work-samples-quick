@@ -1,0 +1,14 @@
+name: work_samples
+description: Work record prototype - show what you actually did on the job. Fictional demo data only.
+publish_to: none
+version: 0.1.0
+environment:
+  sdk: ^3.5.0
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^6.2.1
+  image_picker: ^1.1.2
+  url_launcher: ^6.3.0
+flutter:
+  uses-material-design: true
