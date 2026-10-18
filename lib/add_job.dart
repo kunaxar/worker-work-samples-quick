@@ -55,7 +55,7 @@ class _AddJobState extends State<AddJob> {
     try {
       if (video) {
         final f = await ImagePicker().pickVideo(source: ImageSource.gallery);
-        if (f != null) photos.add(Photo(tint: slate, icon: Icons.videocam));
+        if (f != null) { photos.add(Photo(tint: slate, icon: Icons.videocam)); if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Demo only: the video is not uploaded or analysed. A placeholder tile is added.'))); }
       } else {
         final files = await ImagePicker().pickMultiImage(imageQuality: 80);
         for (final f in files) { photos.add(Photo(bytes: await f.readAsBytes())); }
@@ -102,7 +102,7 @@ class _AddJobState extends State<AddJob> {
             Positioned(right: 4, top: 4, child: InkWell(onTap: () => setState(() => photos.remove(p)), child: const CircleAvatar(radius: 11, backgroundColor: Colors.black54, child: Icon(Icons.close, size: 14, color: Colors.white)))),
           ]),
           InkWell(onTap: () => pick(false), child: _addBox(Icons.add_a_photo_outlined, 'Photos')),
-          InkWell(onTap: () => pick(true), child: _addBox(Icons.videocam_outlined, 'Video')),
+          InkWell(onTap: () => pick(true), child: _addBox(Icons.videocam_outlined, 'Video (demo)')),
         ]),
         const SizedBox(height: 14),
         OutlinedButton.icon(onPressed: () => setState(() => photos.add(Photo(tint: [slate, amber, green][photos.length % 3], icon: Icons.handyman))), icon: const Icon(Icons.image_outlined), label: const Text('Use a sample photo (demo)')),
