@@ -1,0 +1,9 @@
+build/
+.dart_tool/
+.packages
+pubspec.lock
+web/
+.metadata
+*.iml
+android/
+ios/
