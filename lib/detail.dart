@@ -55,7 +55,7 @@ class _JobDetailState extends State<JobDetail> {
           const SizedBox(height: 4),
           const Text('A foreman or coworker confirming makes this job count for more.', style: TextStyle(color: g600)),
           const SizedBox(height: 12),
-          FilledButton(onPressed: _ask, child: const Text('Ask someone to confirm')),
+          FilledButton(onPressed: _ask, child: const Text('Ask someone to confirm (demo, sends nothing)')),
         ]);
       case Vouch.requested:
         body = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
